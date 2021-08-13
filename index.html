@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+    <meta name="theme-color" content="#FFF"/>
+    <script src="https://connect.facebook.net/es_LA/sdk.js?hash=6d8f9720f47d5152c43742a0c2e75958&amp;ua=modern_es6"
+            async crossorigin="anonymous"></script>
+    <script id="facebook-jssdk" src="//connect.facebook.net/es_LA/sdk.js"></script>
+    <link rel="canonical" href="https://data.larepublica.pe/"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="googlebot" content="index, follow"/>
+    <meta name="description"
+          content="En agosto de 2020, Tacna sumaba más de 100 muertes semanales por COVID-19. Un año después, solo se registran seis fallecidos a causa del virus por semana. La región en la que ya se programó la vacunación de jóvenes mayores a 22 años contra la COVID-19 ha conseguido un despliegue exitoso de inmunización: solo en julio se aplicaron más de 103.000 dosis."/>
+    <meta property="og:url" content="https://data.larepublica.pe/"/>
+    <meta property="og:title" content="Cómo despegó la vacunación en Tacna"/>
+    <meta property="og:image" content="https://origin.cronosmedia.glr.pe/large/2021/08/12/lg_6115537fcf56620f690b9caf.jpg"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta property="fb:pages" content="94604237016"/>
+    <meta property="fb:app_id" content="489210501129201"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@larepublica_pe"/>
+    <meta name="twitter:title" content="Cómo despegó la vacunación en Tacna"/>
+    <meta name="twitter:description" content="En agosto de 2020, Tacna sumaba más de 100 muertes semanales por COVID-19. Un año después, solo se registran seis fallecidos a causa del virus por semana. La región en la que ya se programó la vacunación de jóvenes mayores a 22 años contra la COVID-19 ha conseguido un despliegue exitoso de inmunización: solo en julio se aplicaron más de 103.000 dosis."/>
+    <meta name="twitter:image" content="https://origin.cronosmedia.glr.pe/large/2021/08/11/lg_6113e1bdfef5f54689354a6c.jpg"/>
+    <meta name="distribution" content="global"/>
+    <meta name="rating" content="general"/>
+    <meta name="lang" content="es_PE"/>
+    <meta name="author" content="Redacción LR"/>
+    <meta name="keywords" content=""/>
+    <title>Cómo despegó la vacunación en Tacna</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.larepublica.pe/favicon-32x32.png"/>
+</head>
+<body>
+<style type="text/css">
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #212529;
+    font-family: sans-serif;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+    color: #212529;
+}
+
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+.w-1000 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+footer {
+    padding: 42px;
+    font-family: sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.5s ease;
+    padding: 15px 42px;
+    background: lightgrey;
+    border-bottom: 4px solid #fe0404;
+}
+
+header span {
+    font-size: 0;
+}
+
+header img {
+    width: 140px;
+}
+
+footer span {
+    display: block;
+    text-align: center;
+    color: #545b6a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+span [class*="btn-"] {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+span a.btn-fb {
+    margin-left: 0;
+}
+
+span a.btn-fb, span a.btn-twt, span a.btn-wsp {
+    background-image: url(https://files.larepublica.pe/Larepublica/2020/11/09/iconos-redes-sociales-blanco-1604962294.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+span a.btn-twt {
+    background-position: 0 -40px;
+    background-repeat: no-repeat;
+}
+
+span a.btn-wsp {
+    background-position: 0 -80px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 5.5rem;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto 25px;
+    max-width: 750px;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto 25px;
+    max-width: 750px;
+}
+
+h4:before {
+	position: relative;
+    width: 40px;
+    height: 4px;
+    background-color: #e30613;
+    content: "";
+    display: block;
+    bottom: 4px;
+}
+
+.texto-lr {
+    font-size: 11pt;
+    font-weight: 400;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.texto-lr, h1, h2 {
+    font-family: sans-serif;
+    width: 100%;
+    margin: 20px 0;
+}
+
+h1, h2 {
+    color: #fff;
+    /*text-align: center;*/
+    width: 100%;
+}
+
+h1 {
+    max-width: 750px;
+}
+
+h2 {
+    max-width: 750px;
+}
+
+.texto-lr {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    line-height: 1.38;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .p-10 {
+        padding: 0 10px;
+    }
+
+    .texto-lr {
+        margin: 0 auto 20px;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        margin: 20px auto;
+    }
+
+    h3 {
+        margin: 0 auto 15px;
+        padding: 0 15px;
+    }
+
+    h4 {
+    	padding: 0 15px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    footer {
+        padding: 27.9px 30px;
+    }
+
+    .w-text {
+        padding: 0 30px 10px;
+        max-width: 100%;
+        height: initial !important;
+    }
+    .hero-image {
+        display: block !important;
+        min-height: initial !important;
+    }
+    .hero-image .w-img{
+        position: initial;
+    }
+    .w-text h1 {
+        margin-top: 0;
+        padding-top: 20px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    header img {
+        width: 160px;
+    }
+
+    span [class*="btn-"] {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    span a.btn-fb, span a.btn-twt, span a.btn-wsp {
+        background-size: cover;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    span a.btn-twt {
+        background-position: 0 -40px;
+        background-repeat: no-repeat;
+    }
+
+    span a.btn-wsp {
+        background-position: 0 -80px;
+        background-repeat: no-repeat;
+    }
+    h1, h2 {
+        max-width: 80%
+    }
+}    </style>
+<style>        h1 {
+    font-size: 38px;
+}
+
+.headline {
+    font-weight: 100;
+}
+
+.container {
+    padding: 45px 15px 15px 15px;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.wrapper {
+    border-left: 5px solid #eaeaea;
+    padding: 0 25px;
+}
+
+.item-list {
+    font-family: sans-serif;
+    position: relative;
+}
+
+.item-list::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 7%;
+    transform: translate(-50%, -50%);
+    left: -4.4%;
+    background-color: #fe2d04;
+    z-index: 1;
+}
+
+.item-list::after {
+    content: "";
+    background-color: #000;
+    border-radius: 50%;
+    height: 7px;
+    left: -12%;
+    position: absolute;
+    top: 7%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+}
+
+.item-list h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.item-list p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+}
+
+.point {
+    background-color: #eaeaea;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 20px;
+    left: -12%;
+    position: absolute;
+    top: 7%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+}
+
+time {
+    font-size: 20px;
+    font-style: italic;
+}
+.flourish-embed {
+	margin: 20px 10px;
+}
+
+.flourish-credit {
+    display: none;
+}
+
+@media (min-width: 360px) {
+    .item-list::before {
+        left: -3.5%;
+        top: 9%;
+    }
+
+    .item-list::after {
+        left: -10%;
+        top: 9%;
+    }
+
+    .point {
+        left: -10%;
+        top: 9%;
+    }
+}
+
+@media (min-width: 400px) {
+    .item-list::before {
+    }
+
+    .item-list::after {
+        left: -9%;
+    }
+
+    .point {
+        left: -9%;
+    }
+}
+
+@media (min-width: 410px) {
+    .item-list::before {
+    }
+
+    .item-list::after {
+        left: -8.5%;
+    }
+
+    .point {
+        left: -8.5%;
+    }
+}
+
+@media (min-width: 768px) {
+    .item-list::before {
+        left: -1.4%;
+        top: 15%;
+    }
+
+    .item-list::after {
+        left: -4%;
+        top: 15%;
+    }
+
+    .point {
+        border: 3px solid #fff;
+        height: 25px;
+        left: -4%;
+        top: 15%;
+        width: 25px;
+    }
+
+    .headline {
+        margin: 30px auto 0px;
+    }
+    .flourish-embed {
+    	max-width: 768px;
+    	margin: 10px auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 999px) {
+    .item-list::before {
+        left: -1.2%;
+    }
+
+    .item-list::after {
+        left: -3.1%;
+    }
+
+    .point {
+        left: -3.1%;
+    }
+}    </style>
+<style>        .container__menu {
+    font-size: 0;
+}
+
+.mapa_distribucion {
+    display: block;
+    margin: 0 auto;
+    max-width: 970px;
+    width: 100%;
+}
+
+.menu__button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 38px;
+}
+
+.menu__button button {
+    background-color: transparent;
+    border: none;
+    height: 17px;
+    width: 20px;
+}
+
+.menu__button button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    margin: 0 0 3px 0;
+    border-radius: 15px;
+}
+
+.menu__button button span:last-child {
+    margin: 0;
+}
+
+.menu__left {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 38px); /*width: 160px;*/
+}
+
+.menu__rigth {
+    display: none; /*display: inline-block;*/
+    text-align: right;
+    vertical-align: middle;
+    width: calc(100% - 198px);
+}
+
+.content__menu-mobile {
+    display: none;
+    background-color: #FFF;
+    border-bottom: 1px solid #404040;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 77px;
+    width: 100%;
+}
+
+.content__menu-mobile ul {
+    padding: 0 0 10px 0;
+}
+
+.content__menu-mobile ul li {
+    padding: 10px 0 0 0;
+}
+
+.content__menu-mobile ul li a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.active-menu {
+    display: block;
+}
+
+.items__menu {
+    display: none;
+}
+
+.items__menu ul {
+    padding: 10px 0;
+}
+
+.items__menu ul li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+.items__menu ul li a {
+    color: #383939;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .menu__button {
+        display: none;
+    }
+
+    .menu__left {
+        width: 300px;
+    }
+
+    .menu__rigth {
+        display: inline-block;
+        width: calc(100% - 300px);
+    }
+
+    .content__menu-mobile {
+        display: none;
+    }
+
+    .items__menu {
+        display: block;
+    }
+}  
+.hero-image {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-image .opacity {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.w-img {
+    margin: 65px 0 0 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.w-img img {
+    width: 100%;
+}
+
+.w-text {
+    height: calc(100vh - 240px);
+    background: #000;
+    position: relative;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-img {
+        height: 100%;
+        margin: 0;
+        left: 0;
+        overflow: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .w-img img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .w-text {
+        /*height: calc(100vh - 260px);*/
+        height: 100%;
+        /*background-color: #000;*/
+        background: linear-gradient(180deg, transparent, #000);
+        position: relative;
+        padding: 42px 42px 60px;
+        width: 100%;
+    }
+}
+#content__teaser img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+#content__teaser {
+    max-width: 750px;
+    margin: auto;
+}
+.texto-lr small {
+    text-align: center;
+    display: block;
+}
+h5 {
+    text-align: center;
+    font-size: 14px;
+    margin: 30px auto;
+}
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9*/
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+  /*-ms-zoom: 1.25;
+  -moz-transform: scale(1.25);
+  -moz-transform-origin: center;
+  -o-transform: scale(1.25);
+  -o-transform-origin: center;
+  -webkit-transform: scale(1.25);
+  -webkit-transform-origin: center;*/
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+</style>
+<header id="w-header">
+    <div class="container__menu">
+        <!-- <div class="menu__button">                <div class="menu"> <button id="menuMobile"> <span></span> <span></span> <span></span> </button> </div>            </div> -->
+        <div class="menu__left"><a href="https://data.larepublica.pe/" rel="noopener" style="display: inline-block;"
+                                   target="_blank">
+            <picture>
+                <source id="w-sourceLogoDesktop" media="(min-width: 768px)"
+                        srcset="logo.png"/>
+                <img id="w-sourceLogoMobile" src="logo.png"/>
+            </picture>
+        </a></div>
+        <div class="menu__rigth"><span class="items_shared"> <a class="btn-fb btn-Social" data-social="facebook" href="javascript:void(0)" id="id-btn-fb" rel="noopener"> </a> <a class="btn-twt btn-Social" data-social="twitter" href="javascript:void(0)" id="id-btn-twt" rel="noopener"> </a> <a class="btn-wsp" href="https://api.whatsapp.com/send?text=https://especiales.larepublica.pe/" id="id-btn-wsp" rel="noopener" target="_blank"> </a> </span></div>
+    </div>
+</header>
+<div class="hero-image">
+    <div class="w-img"><img alt="hero-image" src="1.jpg"
+            style="display: block" /></div>
+    <!--<div class="opacity"></div>-->
+    <div class="w-text">
+        <h1>Cómo despegó la vacunación en Tacna</h1>
+        <h2>En agosto de 2020, Tacna sumaba más de 100 muertes semanales por COVID-19. Un año después, solo se registran seis fallecidos a causa del virus por semana. La región en la que ya se programó la vacunación de jóvenes mayores a 22 años contra la COVID-19 ha conseguido un despliegue exitoso de inmunización: solo en julio se aplicaron más de 103.000 dosis.</h2>
+    </div>
+</div>
+
+<div id="content__main"></div>
+
+<div id="content__teaser">
+
+    <h5>Por: Alexis Revollé / Unidad LR Data</h5>
+
+    <p class="texto-lr">
+        Una alentadora sensación de sorpresa invadió a Manuel Osorio, de 39 años, al enterarse de que su vacunación contra la COVID-19 estaba programada para el 14 de julio. En febrero, el mes en que llegaron las primeras vacunas al Perú, había imaginado ese momento como un anhelo remoto. Semanas más tarde perdió a un familiar a causa del virus, y su desesperanza aumentó. Hasta que ocurrió lo impensado para él: Tacna, su región, avanzaba como ningún otro departamento en materia de inmunización.
+    </p>
+    
+    <p class="texto-lr">
+       “Siendo franco, no esperaba vacunarme este año. Acá en las regiones del sur la pandemia se llevó a mucha gente. Yo mismo he perdido familia por el virus. No estábamos preparados. El año pasado venían autoridades a crear hospitales de emergencia porque las personas no tenían dónde atenderse cuando se contagiaban. Y ahora dicen que somos la región que vacuna más rápido. Parece mentira”, declara.
+    </p>
+
+    <p class="texto-lr">
+    	El miércoles 14 de julio, Osorio llegó al vacuna car del Parque Perú —ubicado a 10 minutos del Paseo Cívico de Tacna— acompañado de su esposa para recibir su primera dosis. Recuerda que ese día salió temprano, antes de las 7 de la mañana, con un cosquilleo nervioso recorriéndole el cuerpo y una incredulidad que no terminaba de disipar.
+    </p>
+
+    <p class="texto-lr">
+        “Esa semana había escuchado que en Lima recién se estaban vacunando las personas de 60 o 50 años, y yo que tengo menos de 40 ya estaba en el carro yendo a vacunarme. Recién cuando estuve ahí, con la jeringa en el brazo, pensé: es real, me están poniendo la vacuna. He perdido la cuenta de cuántas veces hablamos con mi familia sobre la bendita vacuna, desde el año pasado. Nunca imaginamos que en Tacna iban a avanzar así con esto”, sostiene.
+    </p>
+
+    <img class="texto-lr" style="margin-bottom: 0;" src="2.jpg">
+
+    <p class="texto-lr"><small>(Foto: Diresa Tacna)</small></p>
+
+    <p class="texto-lr">
+        En efecto, desde fines de junio, Tacna se ha consolidado como una de las regiones con los índices más altos de inmunización contra la COVID-19. “¿Por qué Tacna? No lo sé. Lo que sí te puedo decir es que todas las personas que conozco, familia y amigos, quieren vacunarse, quieren recibir la vacuna y están convencidos”, relata Osorio.
+    </p>
+
+    <h3>Despegue desde el sur</h3>
+
+    <p class="texto-lr">
+        Al cierre de este informe, la Dirección Regional de Salud (Diresa) de Tacna confirmó el inicio de la vacunación para jóvenes de 22 años a más en todo su territorio. Se trata, sin duda, de un caso excepcional respecto al resto del país. Si bien la llegada y distribución de vacunas contra la COVID-19 se intensificó debido al arribo de lotes con millones de dosis en junio, solo en Tacna y Callao se ha logrado una aplicación del fármaco que abarca cerca del 30% de su población.
+    </p>
+
+    <p class="texto-lr">
+    	Las consecuencias de ello se han reflejado en una pronunciada disminución del número de fallecimientos en esta región del sur. En las últimas semanas, las autoridades tacneñas han comunicado con entusiasmo que pasan 4 o 5 días consecutivos sin registrar muertes por COVID-19. El último anuncio de esa índole se dio el domingo 8 de agosto.
+    </p>
+    
+    <p class="texto-lr">
+    	Durante los momentos más mortales de la pandemia, en Tacna 20 personas perdían la vida cada día producto del virus. El registro histórico de muertes en la región muestra picos en dos períodos críticos: agosto de 2020 y febrero de 2021. Un panorama que hizo eco en todo el país y no fue muy distinto en dicha región.
+    </p>
+
+    <div class="mb-20">
+        <iframe title="Fallecidos por día (Total) - Tacna" aria-label="Interactive area chart" id="datawrapper-chart-h95jV" src="https://datawrapper.dwcdn.net/h95jV/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+    </div>
+
+    <p class="texto-lr">
+    	“Nosotros nos dimos cuenta de la gravedad del virus cuando ya lo teníamos encima. La primera ola fue devastadora para esta parte del Perú. El virus encontró precariedad, pobreza. Nuestros pacientes se morían y nos invadía la impotencia. En agosto del año pasado identificamos cerca de 90 puntos de riesgo de contagio en Tacna. Las cuarentenas focalizadas nos tuvieron en inmovilización total porque había un riesgo epidemiológico alto”, recuerda Oscar Galdós, Director Regional de Salud de Tacna.
+    </p>
+
+    <p class="texto-lr">
+    	Los números confirman el golpe. Entre el 1 y el 8 de agosto del 2020, 106 personas fallecieron por COVID-19 en Tacna. Cifra considerable en una región con poco más de 350.000 habitantes. Un año después la situación es radicalmente diferente. Entre el 27 de julio y el 3 de agosto de este año, en Tacna solo se contaron 6 muertes a causa del coronavirus.
+    </p>
+
+    <p class="texto-lr">
+        Julio fue el mes del despegue. En 31 días, se aplicaron 103.389 dosis en la región Tacna. Un promedio de 3.440 vacunas cada 24 horas. Los factores que hicieron esto posible dan cuenta de una circunstancia específica de la zona que, según explica el titular de la Diresa Tacna, sirvió para implementar una estrategia intensiva de inmunización.
+    </p>
+
+    <div class="mb-20">
+        <iframe title="Vacunados por día (Total) - Tacna" aria-label="Interactive area chart" id="datawrapper-chart-9pZrF" src="https://datawrapper.dwcdn.net/9pZrF/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+    </div>
+
+    <p class="texto-lr">
+    	“Diría que hemos desarrollado una vacunación de forma agresiva. Nos ayuda, por una parte, que en la ciudad tenemos al 90% de la población. Nuestra prioridad ha sido trabajar con eso desde el inicio. Desde hace tres semanas, no ha habido un día en que hayamos parado de vacunar. Hasta inicios de julio, a veces parábamos los domingos, pero ahora procuramos que sea todos los días, a diferencia de otras regiones. Los resultados los vemos ahora. Son varios días que no contamos muertes por COVID-19, y ahorita en UCI solo estamos usando 18 camas”, detalla Galdós.
+    </p>
+
+    <p class="texto-lr">
+    	El día con mayor número de dosis aplicadas en la región fue el 31 de julio. Un total de 6.655 personas fueron vacunadas durante esa jornada, a la vez que se cerraba un mes en el que todo el Perú dirigió su mirada hacia Tacna. Desde la capital y otros departamentos, el despegue tacneño empezó a generar interés.
+    </p>
+
+    <p class="texto-lr">
+    	“Lo que sabemos es que, cada lunes, hay reuniones de la Diresa Tacna con representantes de otras instituciones, como EsSalud, la sanidad de la PNP, los bomberos, las fuerzas armadas y autoridades municipales. Una vez que han llegado los lotes a la región, automáticamente se juntan para desarrollar estrategias semanales. Acá en Tacna es así, cada semana hay un nuevo plan, diferente al de la anterior y que pretende llegar a cada vez más personas”, explica Rubén López, especialista en salud pública.
+    </p>
+
+    <h3>Aceptación importante</h3>
+
+    <p class="texto-lr">
+    	Pese a todo, ninguna planificación es suficiente por sí misma. Sin una población dispuesta a vacunarse todo proyecto de esta naturaleza está destinado al fracaso. En Tacna, el indicador más certero respecto a dicha aceptación es la propia aplicación del fármaco. De la población objetiva a vacunar, es decir, 260.000 personas, 106.971 ya han recibido las dos dosis.
+    </p>
+
+    <p class="texto-lr">
+        “Hasta el momento, hemos logrado vacunar a más del 40% de la población objetiva. Es un avance importante, pero nos preocupa que en algún momento disminuyan los lotes o no lleguen”, advierte Galdós.
+    </p>
+
+    <p class="texto-lr">
+        Para Gladys Manrique, vecina de la ciudad de Tacna de 69 años, la percepción sobre la vacuna contra la COVID-19 ha sido favorable entre sus conocidos. Ella recibió su primera dosis el 13 de mayo, no sin algo de temor. Cuenta que, pese a las desconfianzas de un principio, casi toda su familia ya se ha inmunizado y se encuentran bien.
+    </p>
+
+    <img class="texto-lr" style="margin-bottom: 0;" src="3.jpg">
+
+    <p class="texto-lr"><small>(Foto: Diresa Tacna)</small></p>
+
+    <p class="texto-lr">
+    	“No te voy a mentir. Cuando me pusieron la vacuna estaba un poquito nerviosa. Mis hijos me decían que no iba a pasar nada malo y mira: así fue. Mi familia y otras personas cercanas han querido vacunarse desde que empezaron a llegar las vacunas. Aquí [en Tacna] la gente sí está yendo bastante a vacunarse”, relata.
+    </p>
+
+    <p class="texto-lr">
+    	Los testimonios refieren que a la planificación se ha sumado un factor clave: una comunicación efectiva. El miedo natural a un medicamento nuevo no se ha combatido con más miedo o con una campaña amenazante, sino con información útil para la ciudadanía. Así lo narra Manrique.
+    </p>
+
+    <p class="texto-lr">
+    	“Cuando llegué al Colegio Cristo Rey, donde me vacunaron, unas doctoras me explicaron cada cosa que iban a hacer, cómo me podía sentir, los cuidados que debía tener y más cosas que ya no me acuerdo mucho. Me hablaron bastante. Eso me hizo agarrar confianza. Salí tranquila después del pinchazo y mis hijos me felicitaron”, recuerda.
+    </p>
+
+    <p class="texto-lr">
+    	A inicios de agosto, además, el Gobierno Regional de Tacna lanzó una campaña para estimular a aquellos ciudadanos que tuvieran puestas las dos dosis de la vacuna. El proyecto lleva por nombre “Aquí tus dos dosis se premian” y, poco a poco, va sumando aliados, como centros comerciales, en la labor de alentar la inmunización entre la población.
+    </p>
+
+    <p class="texto-lr">
+    	“Este tipo de campañas es bien importante porque, si bien la salud es un derecho fundamental, hay muchas personas que pueden entender la vacunación contra la COVID-19 como si las estuvieran obligando. Y al ofrecerles un premio o una recompensa lo que estás haciendo es darles un mensaje de alegría. No es: tienes que ir a vacunarte, a la mala. Más bien es: te felicito por ejercer tu derecho a la salud. Eso es positivo”, reflexiona López.
+    </p>
+</div>
+<br>
+<footer style="background-color: #f0f0f0">
+    <div class="w-1000">
+    	<span><strong>Redacción:</strong> Alexis Revollé</span>
+        <span><strong>Desarrollo Web:</strong> Anna Absi</span>
+        <br/>
+        <span>© Grupo La República </span>
+        <span>Todos los derechos reservados.</span>
+    </div>
+</footer>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-6536106-1"></script>
+<script type="text/javascript" defer>            function gtag() {
+    dataLayer.push(arguments);
+}
+
+(window.dataLayer = window.dataLayer || []), gtag("js", new Date()), gtag("config", "UA-6536106-1");        </script>
+<script>            let btnSocial = document.querySelectorAll(".btn-Social");
+const rss = (nameSocial) => {
+    let link = null;
+    switch (nameSocial) {
+        case "facebook":
+            link = "https://www.facebook.com/sharer/sharer.php?u=";
+            break;
+        case "twitter":
+            link = "https://twitter.com/share?url=";
+            break;
+        default:
+            break;
+    }
+    let url = window.location.href;
+    let text = document.querySelector('meta[name="description"]').content;
+    document.getElementsByClassName("btn-wsp")[0].setAttribute("href", "https://api.whatsapp.com/send?text=" + text + " " + url);
+    const popupText = nameSocial == "twitter" ? "&text=" + text : "";
+    window.open(link + url + popupText, nameSocial + "-popup", "height=350,width=600");
+};
+Object.keys(btnSocial).map((item) => {
+    btnSocial[item].onclick = function () {
+        let nameSocial = btnSocial[item].getAttribute("data-social");
+        rss(nameSocial);
+    };
+});        </script>
+<script>            var h = document.getElementById("w-header"), s = document.getElementById("w-section"),
+    sourceLogoMobile = document.getElementById("w-sourceLogoMobile"),
+    sourceLogoDesktop = document.getElementById("w-sourceLogoDesktop"),
+    socialMediaWhite = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-white-1586816732.svg",
+    socialMediaColor = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-color-1586815843.svg",
+    srcsetImgWhite = "logo.png",
+    srcImgWhite = "logo.png",
+    srcsetImgRed = "logo.png",
+    srcImgRed = "logo.png";
+
+function getData(o) {
+    fetch(o).then(function (response) {
+        return response.json();
+    }).then(function (myJson) {
+        console.log(myJson.values);
+    }).catch(function (o) {
+        console.log("Hubo un problema con la petición Fetch:" + o.message);
+    });
+}
+
+(document.onscroll = function () {
+    window.scrollY >= 7 || window.pageYOffset >= 7 ? (h.classList.add("sticky-gray"), sourceLogoDesktop.setAttribute("srcset", srcsetImgRed), sourceLogoMobile.setAttribute("src", srcImgRed)) : (h.classList.remove("sticky-gray"), sourceLogoDesktop.setAttribute("srcset", srcsetImgWhite), sourceLogoMobile.setAttribute("src", srcImgWhite));
+}), (window.onload = function () {
+    document.querySelectorAll(".btn-Social");
+});        </script>
+</body>
+</html>
